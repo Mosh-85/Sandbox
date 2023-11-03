@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="css/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>About me</title>
+</head>
+<body>
+    <div id="grid-container">
+        <header>
+            <h1>My workshop page for studies</h1>
+            <i id="ham" class="fa-solid fa-bars"></i>
+            <nav>
+                <ul class="navbar">
+                    <p>Links:</p>
+                    <li><a href="/workshop/index.html">Workshop</a></li>
+                    <li><a href="/move/index.html">Simpel Game</a></li>
+                    <li><a href="about.html">About me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>About me</h2>
+            <p>They say I'm a programmer. I have a keyboard and I'm not afraid to use it!</p>
+        </main>
+        <footer>
+            <p>Created by &copyChristian</p>
+        </footer>
+    </div>
+
+    <script>
+    
+    let x = document.querySelector(".navbar")
+
+    document.getElementById("ham").addEventListener("click", (e) =>{
+        if(x.className === "navbar") {
+            x.className += " responsive";
+        }else{
+            x.className = "navbar"
+        }
+        window.addEventListener('resize', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.remove('responsive');
+            })
+        })
+    </script>
+
+    
+</body>
+</html>
